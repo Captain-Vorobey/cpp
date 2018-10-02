@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1538507495 source:d:\projects\1000tasks_arrays\main.cpp
+	<iostream>
+	"arrays_1.h"
+
+1538507554 d:\projects\1000tasks_arrays\arrays_1.h
+	<iostream>
+	<cmath>
+

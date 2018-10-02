@@ -1,5 +1,6 @@
 #ifndef IF_LIB_H_INCLUDED
 #define IF_LIB_H_INCLUDED
+#include <iostream>
 
 int if1(int a)
 {
@@ -42,6 +43,24 @@ int min_2(int a, int b)
         return a;
     }
     return b;
+}
+
+void if4(int a, int b,int c)
+{
+    int temp = 0;
+    if(a > 0)
+    {
+        temp = temp + 1;
+    }
+    if(b > 0)
+    {
+        temp = temp + 1;
+    }
+    if(c > 0)
+    {
+        temp = temp + 1;
+    }
+    std::cout<< temp << std::endl;
 }
 
 int min_3(int a, int b, int c)

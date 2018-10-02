@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1538056593 source:d:\projects\maloi\main.cpp
+	<iostream>
+	"maloi.h"
+
+1538056833 d:\projects\maloi\maloi.h
+

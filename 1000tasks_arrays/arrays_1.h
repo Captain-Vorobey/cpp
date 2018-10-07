@@ -3,11 +3,11 @@
 #include <iostream>
 #include <cmath>
 
-void print_array(int* arr, int size_)
+void print_array(int* array, int size_)
 {
     for(int i = 0; i < size_; ++i)
     {
-        std::cout << arr[i] << std::endl;
+        std::cout << array[i] << std::endl;
     }
 }
 
@@ -89,11 +89,122 @@ void fill_array_fibonache (int* array, int first, int last)
     }
 }
 
+void counter(int* array, int size)
+{
+    for(int i = 0; i < size; ++i)
+    {
+        if(array[i] < array[9])
+        {
+            std::cout << array[i] << std::endl;
+            return;
+        }
+
+    }
+    std::cout << 0 << std::endl;
+}
+
+void array17(int* arr, int n)
+{
+    for(int i = 0, j = n - 1; i < n; ++i)
+    {
+        if(i % 3 == 0)
+        {
+            std::cout << arr[j--] << std::endl;
+        }
+    }
+}
+
+void array17_2(int* array, int first, int last)
+{
+    for(; first < last; ++first)
+    {
+        std::cout << array[first] << std::endl;
+    }
+}
+
+void array21(int* array, int first, int last, int k, int l)
+{
+    int sum = 0;
+    int i = 0;
+    for(; first < k && k <= l && l < last; ++k, ++i)
+    {
+        sum =  sum + array[k];
+    }
+    std::cout << sum / i << std::endl;
+}
+
+void straight(int* array, int first, int last)
+{
+    for(; first < last; ++first)
+    {
+        std::cout << array[first] << std::endl;
+    }
+}
+
+void back_(int* array, int first, int last)
+{
+    std::cout << array[3] << array[4] << std::endl;
+    for(; first > last; --first)
+    {
+        std::cout << array[first] << std::endl;
+    }
+}
+
+void array17(int* array, int first, int last)
+{
+    for(int i = first, j = last - 1; i < last;)
+    {
+        for(int k = 0; k <= 2; ++k)
+        {
+            std::cout << array[i] << std::endl;
+            ++i;
+        }
+
+        for(int k = 0; k < 2; ++k)
+        {
+            std::cout << array[j] << std::endl;
+            --j;
+        }
+    }
+}
+
+
+using BinaryPredicate = bool(*)(int, int);
+
+int find_index(int* arr, int first, int last, BinaryPredicate p)
+{
+    for(; first < last; ++first)
+    {
+        if(p(arr[first], last))
+        {
+            return arr[first];
+        }
+    }
+}
+
+bool less_(int value, int number)
+{
+    if(value < number)
+    {
+        return value;
+    }
+}
+
+bool higher(int value, int number)
+{
+    if(value > number)
+    {
+        return number;
+    }
+}
+
+bool all(int value, int number)
+{
+    return all(less_(value,number), higher(value,number));
+}
+
 
 #endif // ARRAYS_1_H_INCLUDED
-
-
-
 
 
 

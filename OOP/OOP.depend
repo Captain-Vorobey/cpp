@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1539731687 source:d:\projects\oop\main.cpp
+	<iostream>
+	"predicate.h"
+	"utilities.h"
+
+1539731158 d:\projects\oop\predicate.h
+
+1539731158 d:\projects\oop\utilities.h
+

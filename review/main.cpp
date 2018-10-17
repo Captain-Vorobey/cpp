@@ -23,7 +23,10 @@ int find_index(int* array, int first, int last, BinaryPredicate p)
         if(p(array[first], element))
         {
             element = array[first];
+            std::cout << "array[first]: " << array[first] << std::endl;
+            std::cout << "element: " << element << std::endl;
             index_element = first;
+            std::cout << "index: " << index_element <<std::endl;
             //std::cout << index_element << std::endl;
         }
     }
@@ -43,8 +46,8 @@ bool min_r(int value, int value1)
 
 int main()
 {
-    int array[10]{12, 1500, 17, 6, 84, 253, 91, 48, 21, 93};
-    int max_index = find_index(array, 0, 9, min_r);
+    int array[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int max_index = find_index(array, 0, 10, greater_);
     std::cout << max_index << std::endl;
     return 0;
 }

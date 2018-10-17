@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1539734555 source:d:\projects\bguir\main.cpp
+	<iostream>
+	"Predicates.h"
+	"Tests.h"
+	"algoritm.h"
+	"algoritm_tests.h"
+	"predicates_tests.h"
+	"functions_tests.h"
+
+1539387823 d:\projects\bguir\predicates.h
+	<cmath>
+
+1539387823 d:\projects\bguir\tests.h
+
+1539734945 d:\projects\bguir\algoritm.h
+
+1539387823 d:\projects\bguir\algoritm_tests.h
+	"algoritm.h"
+	<cassert>
+
+1539387823 d:\projects\bguir\predicates_tests.h
+	"predicates.h"
+
+1539387823 d:\projects\bguir\functions_tests.h
+	"functions.h"
+
+1539388167 d:\projects\bguir\functions.h
+

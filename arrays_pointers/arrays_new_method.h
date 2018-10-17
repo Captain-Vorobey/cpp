@@ -1,6 +1,7 @@
 #ifndef ARRAYS_NEW_METHOD_H_INCLUDED
 #define ARRAYS_NEW_METHOD_H_INCLUDED
 
+using BinaryPredicate = bool(*) (int, int);
 using UnaryPredicate = bool(*) (int);
 enum Direction {Straight, Back};
 enum Colours {red, green, yellow};
@@ -139,6 +140,15 @@ void print_colours(int c)
     }
 }
 
+void power(int* first, int* last)
+{
+    int temp = 0;
+    for(; first < last; ++first)
+    {
+        temp = 2 * *first;
+        std::cout << temp << std::endl;
+    }
+}
 void print_colours(Colours c)
 {
     if(c == Colours::red)
@@ -156,6 +166,39 @@ void print_colours(Colours c)
     }
 }
 
+int* find_index(int* first, int* last, BinaryPredicate p)
+{
+    int element = *first;
+    int* index = first;
+    for(; first < last; first += 2)
+    {
+        if(p(*first, element))
+        {
+            element = *first;
+            index = first;
+        }
+    }
+    return index;
+}
 
+int* sum_digits(int* first, int* last, UnaryPredicate p)
+{
+    int sum = 0;
+    int mul = 1;
+    for(; first != last; ++first)
+    {
+        if(p(*first))
+        {
+            sum = sum + *first;
+        }
+
+        if(*first < 0)
+        {
+            mul = mul + *first;
+        }
+    }
+    int array[2]{sum, mul};
+    return array;
+}
 
 #endif // ARRAYS_NEW_METHOD_H_INCLUDED

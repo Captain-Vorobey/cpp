@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1540734135 source:d:\projects\hard_1000_tasks\main.cpp
+	<iostream>
+	"begin.h"
+
+1540688506 d:\projects\hard_1000_tasks\begin.h
+	<cmath>
+	<iostream>
+

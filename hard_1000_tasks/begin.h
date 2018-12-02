@@ -154,21 +154,21 @@ int two_pointers(int x1, int x2) // begin 16
 
 int find_length_1(int a, int b, int c) // begin 17
 {
-    int AC = abs(c - a);
-    return AC;
+    int ac = abs(c - a);
+    return ac;
 }
 
 int find_length_2(int a, int b, int c) // begin 17
 {
-    int BC = abs(b - a);
-    return BC;
+    int bc = abs(b - a);
+    return bc;
 }
 
 int find_length_3(int a, int b, int c) // begin 17
 {
-    int AC = abs(c - a);
-    int BC = abs(b - a);
-    int d = AC + BC;
+    int ac = abs(c - a);
+    int bc = abs(b - a);
+    int d = ac + bc;
     return d;
 }
 
@@ -201,6 +201,146 @@ int distance(int x1, int x2, int y1, int y2) // begin 20
     return c;
 }
 
+void heron(int x1, int x2, int x3, int y1, int y2, int y3) // 21
+{
+    double ax = x1 - x2;
+    double ay = y1 - y2;
+    double bx = x2 - x3;
+    double by = y2 - y3;
+    double cx = x3 - x1;
+    double cy = y3 - y1;
+    double a = sqrt(ax * ax + ay * ay);
+    double b = sqrt(bx * bx + by * by);
+    double c = sqrt(cx * cx + cy * cy);
+    double p = (a + b + c) / 2;
+    double S = sqrt(p *(p - a) * (p - b) * (p - c));
+    std::cout << S << " " << p << std::endl;
+}
 
+void swap_1(int& a, int& b) //22
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+void swap_2(int& a, int& b, int& c) // 23
+{
+   int temp = b;
+   b = a;
+   c = temp;
+   a = temp;
+}
+
+void swap_3(int& a, int& b, int& c) // 24
+{
+    int temp = c;
+    int temp1 = b;
+    c = a;
+    b = temp;
+    a = temp1;
+}
+
+int f1(int x) // 25
+{
+    return 3 * pow(x, 6) - 6 * pow(x, 2) - 7;
+}
+
+int f2(int x) // 26
+{
+    return 4 * pow(x - 3, 6) - 7 * pow(x - 3, 3) + 2;
+}
+
+int pow(int value) // 27
+{
+    int a = value * value; // pow(a, 2)
+    a = a * a; // pow(a, 4)
+    a = a * a; // pow(a, 8)
+    return a;
+}
+
+int power(int a) // 28
+{
+    int b;
+    b = a * a; // pow(A, 2)
+    a = b * a; //pow(A, 3)
+    a = a * b;
+    b = a;
+    a = a * a; //pow(A, 10)
+    a = a * b; //pow(A, 15)
+}
+
+double angle_measure_1(double value) // 29
+{
+    return value * PI / 180;
+}
+
+double angle_measure_2(double value) // 30
+{
+    return value * 180 / PI;
+}
+
+int temperature_1(int tf) // 31
+{
+    return (tf - 32) * 5 / 9;
+}
+
+int temperature_2(int tc) // 32
+{
+    return 9 * tc / 5 + 32;
+}
+
+int kg_candies_1(int x, int a) // 33_1
+{
+    return x * a;
+}
+
+int kg_candies_2(int y, int a) // 33_2
+{
+    return y * a;
+}
+
+int candies(int x, int a, int y, int b) // 34
+{
+    int candies = 1 * y;
+    int iriski = 1 * b;
+    int expensive = a / b;
+    std::cout << candies << " " << iriski << " " << expensive << std::endl;
+}
+
+int boat(int v, int u, int t1, int t2) // 35
+{
+    return v * t1 + (v - u) * t2;
+}
+
+int two_cars_1(int v1, int v2, int s, int t) // 36
+{
+    return s + t * (v1 + v2);
+}
+
+int two_cars_2(int v1, int v2, int s, int t) // 37
+{
+    return std::abs(s + t *(v1 - v2));
+}
+
+int linear_equation_1(int a, int b) // 38
+{
+    return - (b / a);
+}
+
+void roots(int a, int b, int c) // 39
+{
+    int d = pow(b, 2) - 4 * a * c;
+    int x1 = (-b + sqrt(d)) / (2 * a);
+    int x2 = (-b -sqrt(d)) / (2 * a);
+    std::cout << x1 << " " << x2 << std::endl;
+}
+
+void linear_equation_2(int a1, int b1, int c1, int a2, int b2 ,int c2) // 40
+{
+    int d = a1 * b2 - a2 * b2;
+    int x = (c1 * b2 - c2 * b1) / d;
+    int y = (a1 * c2 - a2 * c1) / d;
+}
 
 #endif // BEGIN_H_INCLUDED

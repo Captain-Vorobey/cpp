@@ -32,8 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arrays.h" />
 		<Unit filename="begin.h" />
+		<Unit filename="card.h" />
+		<Unit filename="if.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="operations.h" />
+		<Unit filename="predicates.h" />
+		<Unit filename="taska_evfr.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="sorts.h" />
+		<Unit filename="utilities.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

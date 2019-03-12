@@ -1,5 +1,6 @@
 #ifndef SORTS_H_INCLUDED
 #define SORTS_H_INCLUDED
+#include "utilities.h"
 
 int rev = 0;
 
@@ -19,6 +20,34 @@ void bubble_sort(Iterator first, Iterator last, BinaryPredicate p)
                 is_sort = false;
             }
             ++rev;
+        }
+        if(is_sort)
+        {
+            return;
+        }
+    }
+}
+
+template <class Iterator, class BinaryPredicate>
+void selection_sort(Iterator first, Iterator last, BinaryPredicate p)
+{
+    bool is_sort;
+    for(Iterator i = first; i != last - 1; ++i)
+    {
+        is_sort = true;
+        Iterator min_index = i;
+        for(Iterator j = i + 1; j != last; ++j)
+        {
+            if(p(*j, *min_index))
+            {
+                min_index = j;
+                is_sort = false;
+            }
+            ++rev;
+        }
+        if(min_index != i)
+        {
+            stu::swap(*i, *min_index);
         }
         if(is_sort)
         {

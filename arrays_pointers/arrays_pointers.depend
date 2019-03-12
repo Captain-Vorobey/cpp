@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1539294709 source:d:\projects\arrays_pointers\main.cpp
+1540862433 source:d:\projects\arrays_pointers\main.cpp
 	<iostream>
 	"predicate.h"
 	<cmath>
@@ -7,5 +7,5 @@
 
 1539294461 d:\projects\arrays_pointers\predicate.h
 
-1539295591 d:\projects\arrays_pointers\arrays_new_method.h
+1539380195 d:\projects\arrays_pointers\arrays_new_method.h
 

@@ -32,53 +32,20 @@ int accumulate_(int* first, int* last, int init, BinaryOperation p)
     return init;
 }
 
-
-template <typename Iterator, typename T>
-
-void print_double_array(Iterator array, T col, T row)
+int find_if(int* first, int* last, BinaryPredicate p)
 {
-    for(T first = 0; first < col; ++first)
+    int element = *first;
+    for(; first != last; ++first)
     {
-        for(T second = 0; second < row; ++second)
-        {
-            std::cout << array[first][second] << " " << std::endl;
-        }
-        std::cout << std::endl;
+        if(p(*first, element))
+           {
+               element = *first;
+           }
     }
+    return element;
 }
 
 
-template <typename Iterator, typename T>
-T qwerty(Iterator array, T col, T row, T first, BinaryPredicate p)
-{
-    Iterator temp = ++first;
-    for(T i = 0; i != col; ++i)
-    {
-        for(T j = 0; j != row; ++j)
-        {
-            if(p(array[i][j], temp))
-            {
-                temp = first;
-                std::cout << array[i][j] << std::endl;
-            }
-                std::cout << std::endl;
-        }
-    }
-}
-
-template <typename Iterator, typename T>
-
-T qwerty1(int* first, int* last, T col, T row, BinaryOperation p)
-{
-    Iterator temp = ++first;
-    for(; first < last; ++first)
-    {
-        for(T i = 0; )
-        {
-
-        }
-    }
-}
 
 /*int sum_min_max(int* first, int* last, BinaryPredicate p)
 {

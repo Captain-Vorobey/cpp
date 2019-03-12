@@ -43,6 +43,45 @@ struct List
     }
 };
 
+//********************************************************************************
+
+struct List
+{
+    struct Node
+    {
+        Node* next = nullptr;
+        int value;
+        Node(){} = default;
+        Node(int value)
+        {
+            value = v;
+        }
+    };
+
+    Node* head = nullptr;
+    List(){} = default;
+    void push_back(int value)
+    {
+        Node* head = i;
+        if(i == nullptr)
+        {
+            i = new Node(value);
+        }
+    }
+
+    void print_list()
+    {
+        Node* temp = head;
+        while(temp -> next)
+        {
+            std::cout << temp -> next << std::endl;
+            temp = temp -> next;
+        }
+    }
+};
+
+//********************************************************************************
+
 int main()
 {
     List::Node* head = new List::Node(8);

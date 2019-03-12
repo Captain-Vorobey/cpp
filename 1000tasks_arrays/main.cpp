@@ -1,10 +1,34 @@
 #include <iostream>
 #include "arrays_1.h"
 #include "Minmax.h"
+
+
 int main()
 {
-    //int a = 998877;
-    int array[10] {100, 47, 66, 33, 87, 1200, 63, 70, 32, 210};
+    int array[10]{1, 3, 1, 2, 1, 1, 2, 2, 3, 1};
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int a = 998877;
+    //int array[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ,13 ,14 ,15 ,16 ,17 ,18 ,19};
     //std::cout << array[5];
     //array[10] = 11111;
     //std::cout << a;
@@ -20,9 +44,8 @@ int main()
     //print_array(array, 0, 10);
     //counter(array, 10);
     //array21(array, 0, 10, 3, 5);
-    //array17(array, 0, 10);
+    //array17(array, array + 20);;
     ///int max_ = find_index(arr, 0, 10, higher_);
     ///int min_ = find_index(arr, 0, 10, less_);
-    std::cout << find_index(array, 0, 10, less_) << std::endl;
+    //std::cout << find_index(array, 0, 10, less_) << std::endl;
     return 0;
-}

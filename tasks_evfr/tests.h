@@ -5,7 +5,7 @@
 #include <cassert>
 #include "Header.h"
 
-void  find_element_test()
+void find_element_test()
 {
     Vector;
     auto f = find_element(v.begin(),v.end(),[](int a,int b){return a<b;});

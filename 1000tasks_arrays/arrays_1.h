@@ -2,6 +2,8 @@
 #define ARRAYS_1_H_INCLUDED
 #include <iostream>
 #include <cmath>
+#include "predicates.h"
+#define Vector std::vector<int> v{1, 1, 3, 4, 5, 6, 7, 1, 2, 10}
 
 void print_array(int* array, int size_)
 {
@@ -150,24 +152,48 @@ void back_(int* array, int first, int last)
     }
 }
 
-void array17(int* array, int first, int last)
+/*template <typename Iterator>
+void array17(Iterator first, Iterator last)
 {
-    for(int i = first, j = last - 1; i < last;)
+    --last;
+    for(int i = *first; i < last;)
     {
-        for(int k = 0; k <= 2; ++k)
+        for(int k = 0; k < 2; ++k)
         {
-            std::cout << array[i] << std::endl;
+            std::cout << *first << std::endl;
             ++i;
         }
 
         for(int k = 0; k < 2; ++k)
         {
-            std::cout << array[j] << std::endl;
-            --j;
+            std::cout << *last << std::endl;
+            --last;
         }
+    }
+}*/
+
+template <class Iterator, class UnaryPredicate>
+void for_each(Iterator first, Iterator last, UnaryPredicate p)
+{
+    for(; first != last; ++first)
+    {
+        p(*first);
     }
 }
 
+template <class Iterator, class BinaryOperation>
+Iterator counter(Iterator first, Iterator last, BinaryOperation op)
+{
+    int counter = 0;
+    for(; first != last; ++first)
+    {
+        if(op(*first, *(first + 1)))
+        {
+            ++counter;
+        }
+    }
+    return counter;
+}
 
 using BinaryPredicate = bool(*)(int, int);
 
@@ -202,7 +228,6 @@ bool all(int value, int number)
 {
     return all(less_(value,number), higher(value,number));
 }
-
 
 #endif // ARRAYS_1_H_INCLUDED
 

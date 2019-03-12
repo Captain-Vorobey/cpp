@@ -18,12 +18,12 @@ std::set<int> andl(std::set<int> a, std::set<int> b)
 std::set<int> orl(std::set<int> a, std::set<int> b)
 {
     std::set<int> result;
-    for(auto i = a.begin(); i != a.end(); ++i)
+    for(std::set<int>::iterator i = a.begin(); i != a.end(); ++i)
     {
         result.insert(*i);
     }
 
-    for(auto j = b.begin(); j != b.end(); ++j)
+    for(std::set<int>::iterator j = b.begin(); j != b.end(); ++j)
     {
         result.insert(*j);
     }

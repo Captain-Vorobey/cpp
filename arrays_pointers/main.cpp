@@ -10,7 +10,7 @@ int main()
     //fill_powers_2(array, array + 5, 2);
     //array3(array, array + 5, 11, 24);
     // array4(array, array + 5, 11, 24);
-    //print_array(array, array +5);
+    //print_array(array, array + 5);
     //int result = array8(array, array + 5, is_even, Direction::Straight);
     //std::cout << std::endl;
     //std::cout << result << std::endl;
@@ -18,6 +18,6 @@ int main()
     //power(array, array + 5);
     //int index = find_index(array + 1, array + 10, max_) - array;
     //std::cout << index << std::endl;
-    std::cout << sum_digits(array, array + 10, positive)[0] << std::endl;
+    //std::cout << sum_digits(array, array + 10, positive)[0] << std::endl;
     return 0;
 }

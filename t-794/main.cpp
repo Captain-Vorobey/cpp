@@ -1,7 +1,6 @@
 #include <iostream>
 #include "algorithms.h"
 
-
 int main()
 {
     int array1[10]{2, 8, 5, 1, 9, 3, 32, 6, 87, 10};

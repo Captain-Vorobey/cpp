@@ -35,6 +35,8 @@
 		<Unit filename="Minmax.h" />
 		<Unit filename="arrays_1.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="predicates.h" />
+		<Unit filename="tasks.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

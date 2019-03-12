@@ -2,9 +2,10 @@
 #define ALGORITHMS_H_INCLUDED
 #include <algorithm>
 
-int* addres(int* first, int* last)
+template <class Iterator>
+Iterator addres(Iterator first, Iterator last)
 {
-    int* addres_ = first;
+    Iterator addres_ = first;
     int min_el = *first;
     for(; first != last; ++first)
     {
@@ -17,7 +18,7 @@ int* addres(int* first, int* last)
     return addres_;
 }
 
-/*void swap(int* a, int* b)
+void swap(int& a, int& b)
 {
     int temp = *a;
     *a = *b;
@@ -30,7 +31,7 @@ void arrays_swap(int* array1, int* array2, int size)
     {
         swap(array1[i], array2[i]);
     }
-}*/
+}
 
 
 void arr_swap(int* array1, int* array2)
@@ -40,7 +41,7 @@ void arr_swap(int* array1, int* array2)
     array2 = temp;
 }
 
-/*
+
 struct Fraction
 {
     int m_num;
@@ -50,10 +51,10 @@ struct Fraction
         m_num = num;
         m_denum = denum;
     }
-    Fraction mul(/*Fraction* this, Fraction that)
+    Fraction mul(/*Fraction*/ this, Fraction that)
     {
         Fraction result;
-        result.num = (*this).denum * that.denum;
+        result.num = (*this).num * that.num;
         result.denum = (*this).denum * that.denum;
         return result;
     }
@@ -83,7 +84,7 @@ struct Find_el
         }
     }
 };
-*/
+
 
 int gcd(int a, int b)
 {
@@ -102,7 +103,7 @@ Fraction operator*
     result.denum = a.denum * b.denum;
     result.normalize()
     {
-        int gcd
+        int gcd;
     }
     return result;
 }
@@ -127,5 +128,24 @@ Human arr[3]
 }
 
 arr[1].first_name
+
+int gcd(int a, int b)
+{
+    if(a < b)
+    {
+        std::swap(a, b);
+    }
+    while(int c = a % b)
+    {
+        a = b;
+        b = c;
+    }
+    return b;
+}
+
+int lcm(int a, int b)
+{
+    return (a * b) / stu::gcd(a, b);
+}
 
 #endif // ALGORITHMS_H_INCLUDED

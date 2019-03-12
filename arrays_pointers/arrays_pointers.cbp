@@ -32,9 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="algorithms.h" />
 		<Unit filename="arrays_new_method.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="min_max.h" />
 		<Unit filename="predicate.h" />
+		<Unit filename="predicates.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

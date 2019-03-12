@@ -149,6 +149,7 @@ void power(int* first, int* last)
         std::cout << temp << std::endl;
     }
 }
+
 void print_colours(Colours c)
 {
     if(c == Colours::red)

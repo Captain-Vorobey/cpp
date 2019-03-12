@@ -1,0 +1,6 @@
+#ifndef MIN_MAX_H_INCLUDED
+#define MIN_MAX_H_INCLUDED
+
+
+
+#endif // MIN_MAX_H_INCLUDED
